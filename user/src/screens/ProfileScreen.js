@@ -57,15 +57,15 @@ const ProfileScreen = () => {
                             </div>
                         </div>
                         <div className="wizard pt-3 fix-top" style={{ marginTop: '10px' }}>
-                            <div class="d-flex align-items-start">
+                            <div className="d-flex align-items-start">
                                 <div
-                                    class="nav align-items-start flex-column col-12 nav-pills me-3 "
+                                    className="nav align-items-start flex-column col-12 nav-pills me-3 "
                                     id="v-pills-tab"
                                     role="tablist"
                                     aria-orientation="vertical"
                                 >
                                     <button
-                                        class={buleanProfile ? 'nav-link active color-red' : 'nav-link'}
+                                        className={buleanProfile ? 'nav-link active color-red' : 'nav-link'}
                                         id="v-pills-home-tab"
                                         data-bs-toggle="pill"
                                         data-bs-target="#v-pills-home"
@@ -80,12 +80,12 @@ const ProfileScreen = () => {
                                         }}
                                     >
                                         <div style={{ fontSize: '18px', paddingRight: '10px' }}>
-                                            <i class="fas fa-cogs"></i>
+                                            <i className="fas fa-cogs"></i>
                                         </div>
                                         Profile Settings
                                     </button>
                                     <button
-                                        // class="nav-link d-flex"
+                                        // className="nav-link d-flex"
                                         className={buleanOrder ? 'nav-link d-flex color-red' : 'nav-link d-flex'}
                                         id="v-pills-profile-tab"
                                         data-bs-toggle="pill"
@@ -101,7 +101,7 @@ const ProfileScreen = () => {
                                         }}
                                     >
                                         <div style={{ fontSize: '18px', paddingRight: '10px' }}>
-                                            <i class="fas fa-shopping-cart"></i>
+                                            <i className="fas fa-shopping-cart"></i>
                                         </div>
                                         Orders List
                                         <span className="badge2">{orders ? orders.length : 0}</span>
@@ -112,9 +112,9 @@ const ProfileScreen = () => {
                     </div>
 
                     {/* panels */}
-                    <div class="tab-content col-lg-8 pb-5 pt-lg-0 pt-3" id="v-pills-tabContent">
+                    <div className="tab-content col-lg-8 pb-5 pt-lg-0 pt-3" id="v-pills-tabContent">
                         <div
-                            class="tab-pane fade show active"
+                            className="tab-pane fade show active"
                             id="v-pills-home"
                             role="tabpanel"
                             aria-labelledby="v-pills-home-tab"
@@ -122,7 +122,7 @@ const ProfileScreen = () => {
                             <ProfileTabs />
                         </div>
                         <div
-                            class="tab-pane fade"
+                            className="tab-pane fade"
                             id="v-pills-profile"
                             role="tabpanel"
                             aria-labelledby="v-pills-profile-tab"

@@ -71,7 +71,7 @@ export default function FilterSection({ setRating, setMinPrice, setMaxPrice, rat
         <div className="section-div col-lg-2 col-md-3">
             <div className="Category-section">
                 <div className="section-flex">
-                    <i class="fas fa-align-left"></i>
+                    <i className="fas fa-align-left"></i>
                     <h2 className="Category-section__h2">Category</h2>
                 </div>
                 <ul className="Category-section__list">
@@ -94,7 +94,7 @@ export default function FilterSection({ setRating, setMinPrice, setMaxPrice, rat
             </div>
             <div className="Category-search">
                 <div className="section-flex">
-                    <i class="fas fa-filter "></i>
+                    <i className="fas fa-filter "></i>
                     <h2 className="Category-section__h2 Category-search__h2">Filter</h2>
                 </div>
 
@@ -210,7 +210,7 @@ export default function FilterSection({ setRating, setMinPrice, setMaxPrice, rat
                 </div>
                 {/* <div className="assess-star">
                     <p className="distance-price__p">Review</p>
-                    <input class="rating" />
+                    <input className="rating" />
                 </div> */}
                 <div className="" display={{ display: 'flex', alignItems: 'center' }}>
                     <button className="distance-price__submit">

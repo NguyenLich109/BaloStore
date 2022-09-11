@@ -99,7 +99,7 @@ const PlaceOrderScreen = ({ history }) => {
                         <div className="row " style={{ display: 'flex', alignItems: 'center' }}>
                             <div className="col-lg-3 col-sm-3 mb-lg-3 center fix-bottom">
                                 <div className="alert-success order-box fix-none">
-                                    <i class="fas fa-user"></i>
+                                    <i className="fas fa-user"></i>
                                 </div>
                             </div>
                             <div className="col-lg-9 col-sm-9 mb-lg-9 fix-display">
@@ -129,7 +129,7 @@ const PlaceOrderScreen = ({ history }) => {
                         <div className="row" style={{ display: 'flex', alignItems: 'center' }}>
                             <div className="col-lg-3 col-sm-3 mb-lg-3 center fix-bottom">
                                 <div className="alert-success order-box fix-none">
-                                    <i class="fab fa-paypal"></i>
+                                    <i className="fab fa-paypal"></i>
                                 </div>
                             </div>
                             <div className="col-lg-9 col-sm-9 mb-lg-9">
@@ -219,7 +219,7 @@ const PlaceOrderScreen = ({ history }) => {
                                 type="submit"
                                 //onClick={placeOrderHandler}
                                 // type="button"
-                                class="btn btn-primary pay-button"
+                                className="btn btn-primary pay-button"
                                 data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop"
                             >

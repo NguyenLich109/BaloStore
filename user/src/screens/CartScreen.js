@@ -56,7 +56,7 @@ const CartScreen = ({ match, location, history }) => {
                         <div style={{ display: 'flex', flexDirection: 'column' }}>
                             <img
                                 style={{ width: '100px', height: '100px', margin: '0 auto' }}
-                                src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/cart/9bdd8040b334d31946f49e36beaf32db.png"
+                                src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/cart/9bdd8040b334d31946f49e36beaf32db.png" alt='shopeemobile'
                             ></img>
                             Your shopping cart is empty
                         </div>
@@ -74,7 +74,7 @@ const CartScreen = ({ match, location, history }) => {
                     <>
                         <div className="backTo" style={{ paddingTop: '10px' }}>
                             <Link to="/" className="col-md-6 ">
-                                <i class="fas fa-undo" style={{ paddingRight: '5px' }}></i>
+                                <i className="fas fa-undo" style={{ paddingRight: '5px' }}></i>
                                 Back To Shop
                             </Link>
                         </div>

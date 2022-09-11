@@ -21,7 +21,7 @@ const Pagination = (props) => {
                                 : `/page/${page > 1 ? page - 1 : page}`
                         }
                     >
-                        <i class="fas fa-angle-double-left"></i>
+                        <i className="fas fa-angle-double-left"></i>
                     </Link>
                 </div>
                 <ul className="pagination justify-content-center">
@@ -52,7 +52,7 @@ const Pagination = (props) => {
                                 : `/page/${page < pages ? page + 1 : pages}`
                         }
                     >
-                        <i class="fas fa-angle-double-right"></i>
+                        <i className="fas fa-angle-double-right"></i>
                     </Link>
                 </div>
             </nav>

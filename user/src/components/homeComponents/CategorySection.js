@@ -10,7 +10,7 @@ export default function CategorySection() {
         <div className="section-div col-lg-2 col-md-3">
             <div className="Category-section">
                 <div className="section-flex">
-                    <i class="fas fa-align-left"></i>
+                    <i className="fas fa-align-left"></i>
                     <h2 className="Category-section__h2">Category</h2>
                 </div>
                 <ul className="Category-section__list">
@@ -30,7 +30,7 @@ export default function CategorySection() {
             </div>
             <div className="Category-search">
                 <div className="section-flex">
-                    <i class="fas fa-filter "></i>
+                    <i className="fas fa-filter "></i>
                     <h2 className="Category-section__h2 Category-search__h2">Filter</h2>
                 </div>
                 <form className="distance-price" onClick={handlerApply}>

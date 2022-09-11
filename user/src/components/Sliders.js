@@ -27,8 +27,8 @@ export default function Sliders() {
     };
     return (
         <div className="Announcement">
-            <div class="container ">
-                <div class="row slider-row">
+            <div className="container ">
+                <div className="row slider-row">
                     <Slider {...settings}>
                         {slider?.map((value, index) => {
                             return (

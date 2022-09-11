@@ -53,14 +53,14 @@ export default function Silder() {
   return (
     <div className='Announcement'>
 
-      <div class="container ">
-        <div class="row slider-row">
+      <div className="container ">
+        <div className="row slider-row">
           <div className='slider-wrap'>
             <div className='slider'>
 
               <i onClick={handleIndexNext} className="slider-btn__next fal fa-angle-right"></i>
               <i onClick={handleIndexPre} className="slider-btn__pre fal fa-angle-left"></i>
-              <ul class="slider-list"
+              <ul className="slider-list"
               // style={{'transform':`translateX(${sliderCurrent}px)`}}
               >
 

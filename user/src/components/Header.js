@@ -93,7 +93,7 @@ const Header = () => {
                             <div className="row ">
                                 <div className="col-6 d-flex align-items-center">
                                     <div className="moblie-menu" onClick={clickIconNavBar}>
-                                        <i class="fas fa-bars"></i>
+                                        <i className="fas fa-bars"></i>
                                     </div>
                                     <Link className="navbar-brand" to="/">
                                         <img alt="logo" src="/images/logo.png" />
@@ -110,7 +110,7 @@ const Header = () => {
                                                 aria-haspopup="true"
                                                 aria-expanded="false"
                                             >
-                                                <i class="fas fa-user"></i>
+                                                <i className="fas fa-user"></i>
                                             </button>
                                             <div className="dropdown-menu">
                                                 <Link className="dropdown-item" to="/profile">
@@ -131,7 +131,7 @@ const Header = () => {
                                                 aria-haspopup="true"
                                                 aria-expanded="false"
                                             >
-                                                <i class="fas fa-user"></i>
+                                                <i className="fas fa-user"></i>
                                             </button>
                                             <div className="dropdown-menu">
                                                 <Link className="dropdown-item" to="/login">

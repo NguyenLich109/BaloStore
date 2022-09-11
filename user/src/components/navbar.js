@@ -41,7 +41,7 @@ export default function NavBar({ onRemove }) {
                         ))}
                     </ul>
                     <div className="modal-icon" onClick={onRemove}>
-                        <i class="fas fa-times-circle"></i>
+                        <i className="fas fa-times-circle"></i>
                     </div>
                 </div>
             </div>

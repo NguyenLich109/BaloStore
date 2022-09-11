@@ -18,19 +18,19 @@ const Footer = () => {
                         <ul className="footer-list">
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-facebook"></i>
+                                    <i className="fab fa-facebook"></i>
                                     Facebook
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-instagram"></i>
+                                    <i className="fab fa-instagram"></i>
                                     Instagram
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fab fa-linkedin"></i>
+                                    <i className="fab fa-linkedin"></i>
                                     LinkedIn
                                 </a>
                             </li>
