@@ -53,15 +53,15 @@ export default function AddSlider() {
         <>
             <Toast />
             {error && (
-                <div class="alert alert-danger" role="alert">
+                <div className="alert alert-danger" role="alert">
                     {error}
                 </div>
             )}
             {loading && <Loading />}
-            <div class="input-group mb-3">
+            <div className="input-group mb-3">
                 <input
                     type="url"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Please type url"
                     aria-label="dsasd"
                     aria-describedby="basic-addon1"
@@ -74,8 +74,8 @@ export default function AddSlider() {
                     }}
                     onChange={(e) => setUrl(e.target.value)}
                 />
-                <div class="input-group-prepend">
-                    <button class="btn btn-outline-secondary" type="button" onClick={submitHandler}>
+                <div className="input-group-prepend">
+                    <button className="btn btn-outline-secondary" type="button" onClick={submitHandler}>
                         Add
                     </button>
                 </div>
