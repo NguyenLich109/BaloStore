@@ -4,7 +4,8 @@ import { AVATAR_REQUEST, AVATAR_SUCCESS, AVATAR_FAIL } from '../Constants/Avatar
 export const ListAvatar = () => async (dispatch) => {
     try {
         dispatch({ type: AVATAR_REQUEST });
-        const { data } = await axios.get(`/api/avatar`);
+        // const { data } = await axios.get(`/api/avatar`);
+        const { data } = await axios.get(`/api/ali`);
         dispatch({ type: AVATAR_SUCCESS, payload: data });
     } catch (error) {
         dispatch({

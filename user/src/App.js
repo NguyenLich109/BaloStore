@@ -15,6 +15,16 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import NotFound from './screens/NotFound';
 import PrivateRouter from './PrivateRouter';
+// upload image
+//COMPONENTS
+// import AllImages from "./components/AllImages";
+// import Form from "./components/Form";
+// import Header from "./components/Header";
+
+// import history from "./history";
+import AllImages from "./components/profileComponents/UploadIMG/AllImages";
+import Form from "./components/profileComponents/UploadIMG/Form";
+
 
 const App = () => {
     return (
@@ -29,6 +39,10 @@ const App = () => {
                 <Route path="/products/:id" component={SingleProduct} />
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={Register} />
+                
+                <Route path="/ali" component={AllImages} />
+                <Route path="/add" component={Form} />
+
                 <PrivateRouter path="/profile" component={ProfileScreen} />
                 <PrivateRouter path="/cart/:id?" component={CartScreen} />
                 <PrivateRouter path="/shipping" component={ShippingScreen} />

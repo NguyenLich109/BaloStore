@@ -126,7 +126,7 @@ const CategoriesTable = ({ handleEditInfo, handleCurrentCategory }) => {
             <td>
               <b>Women fashion</b>
             </td>
-            <td>Fashions for Women</td>
+            <td>Backpack for Women</td>
 
             <td className="text-end">
               <div className="dropdown">

@@ -9,6 +9,11 @@ import isEmpty from 'validator/lib/isEmpty';
 import { listCart } from '../../Redux/Actions/cartActions';
 import { ListAvatar } from '../../Redux/Actions/avatarAction';
 
+//start image lo go
+import axios from 'axios';
+//start image lo go
+
+
 const ProfileTabs = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -18,7 +23,9 @@ const ProfileTabs = () => {
     const [address, setAddress] = useState('');
     const [city, setCity] = useState('');
     const [country, setCountry] = useState('');
+
     const [image, setImage] = useState('');
+
     const [confirmPassword, setConfirmPassword] = useState('');
     const [uploadProfile, setUploadProfile] = useState(true); //ghi chú
     const [uploadPassword, setUploadPassword] = useState(false); //ghi chú
@@ -32,6 +39,16 @@ const ProfileTabs = () => {
         pauseOnHover: false,
         autoClose: 2000,
     };
+// image logo bắt đầu
+const [img, setImg] = useState([]);
+    const getImage = async () => {
+     const data = await axios.get("http://localhost:5000/api/ali")
+        setImg(data.data)
+    }
+    useEffect(()=> {
+        getImage()
+    }, [])
+// image logo kết thúc
 
     const dispatch = useDispatch();
     // get avatar
@@ -418,7 +435,7 @@ const ProfileTabs = () => {
                     <button
                         style={{ display: 'none' }}
                         type="button"
-                        class="btn btn-primary"
+                        className="btn btn-primary"
                         data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop"
                     >
@@ -426,7 +443,7 @@ const ProfileTabs = () => {
                     </button>
 
                     <div
-                        class="modal fade"
+                        className="modal fade"
                         id="staticBackdrop"
                         data-bs-backdrop="static"
                         data-bs-keyboard="false"
@@ -434,21 +451,22 @@ const ProfileTabs = () => {
                         aria-labelledby="staticBackdropLabel"
                         aria-hidden="true"
                     >
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">
+                        <div className="modal-dialog">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title" id="staticBackdropLabel">
                                         Avatar Mẫu
                                     </h5>
                                     <button
                                         type="button"
-                                        class="btn-close"
+                                        className="btn-close"
                                         data-bs-dismiss="modal"
                                         aria-label="Close"
                                     ></button>
                                 </div>
-                                <ul class="modal-body" style={{ display: 'flex', padding: '9px', flexWrap: 'wrap' }}>
+                                <ul className="modal-body" style={{ display: 'flex', padding: '9px', flexWrap: 'wrap' }}>
                                     {avatar?.map((data) => (
+                                    // {img?.map((data) => (
                                         <li
                                             key={data._id}
                                             onClick={(e) => {
@@ -462,8 +480,10 @@ const ProfileTabs = () => {
                                             }}
                                         >
                                             <img
-                                                src={data.url}
+                                                src={data.image}
+                                                // src={data.url}
                                                 id={data._id}
+                                                alt=""
                                                 style={
                                                     (avatarId === undefined ? image : avatarId) === data._id
                                                         ? {
@@ -483,13 +503,13 @@ const ProfileTabs = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                                         Close
                                     </button>
                                     <button
                                         type="button"
-                                        class="btn btn-primary"
+                                        className="btn btn-primary"
                                         onClick={() => {
                                             setImage(avatarId);
                                         }}

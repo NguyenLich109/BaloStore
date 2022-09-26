@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react'; //useState
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
+import { Link} from 'react-router-dom'; // useHistory
 import { ListCategory } from '../Redux/Actions/categoryActions';
-import { listProduct } from '../Redux/Actions/ProductActions';
+// import { listProduct } from '../Redux/Actions/ProductActions';
 
 export default function NavBar({ onRemove }) {
     const dispatch = useDispatch();
@@ -12,7 +12,7 @@ export default function NavBar({ onRemove }) {
 
     useEffect(() => {
         dispatch(ListCategory());
-    }, []);
+    }, ['']); // ,[]
     return (
         <>
             {/* Pc-navbar */}
@@ -31,7 +31,7 @@ export default function NavBar({ onRemove }) {
                 <div className="modal-tablet"></div>
                 <div className="modal-nav">
                     <div className="modal-nav__img">
-                        <img src="/images/logo.png"></img>
+                        <img src="/images/logo.png" alt='logo'></img>
                     </div>
                     <ul className="modal-nav__list">
                         {categories.map((category) => (

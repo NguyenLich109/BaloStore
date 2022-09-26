@@ -7,6 +7,8 @@ import Orders from './../components/profileComponents/Orders';
 import moment from 'moment';
 import { listMyOrders } from '../Redux/Actions/OrderActions';
 import { ListAvatar } from '../Redux/Actions/avatarAction';
+
+
 const ProfileScreen = () => {
     // window.scrollTo(0, 0);
 
@@ -72,7 +74,7 @@ const ProfileScreen = () => {
                                 >
                                     <img
                                         // src={valueAvatar === undefined ? './images/user.png' : valueAvatar.url} // upload ảnh
-                                        src={user?.image?.url}
+                                        src={user?.image?.url || './images/user.png'}
                                         alt="Lỗi"
                                         style={{
                                             height: '100px',
@@ -86,7 +88,7 @@ const ProfileScreen = () => {
                                     {/* Nút button Avatar */}
                                     <button
                                         type="submit"
-                                        class="btn btn-primary pay-button"
+                                        className="btn btn-primary pay-button"
                                         data-bs-toggle="modal"
                                         data-bs-target="#staticBackdrop"
                                         style={{ fontSize: '14px' }}
@@ -157,6 +159,7 @@ const ProfileScreen = () => {
                                 </div>
                             </div>
                         </div>
+                        {/* <AllImages/> */}
                     </div>
 
                     {/* panels */}
