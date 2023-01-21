@@ -14,6 +14,12 @@ const Footer = () => {
                             <li>
                                 <span>Nguyễn Văn Lịch</span>
                             </li>
+                            <li>
+                                <span>Phạm Xuân Nhựt</span>
+                            </li>
+                            <li>
+                                <span>Trần Quốc Bảo</span>
+                            </li>
                         </ul>
                     </div>
                     <div className="col-lg-3 col-md-6 col-sm-12 center">

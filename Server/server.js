@@ -14,6 +14,7 @@ import path from 'path';
 import Upload from './Routes/Upload.js';
 import newsRouter from './Routes/newsRouter.js';
 import forgotPassRouter from './Routes/forgotPassRouter.js';
+import createUserRouter from './Routes/createUserRouter.js';
 
 dotenv.config();
 // import forgotPass from './Routes/forgotPassRouter.js';
@@ -46,6 +47,7 @@ app.use('/api/imageProfile', imageProfile);
 app.use(express.static('public'));
 // forgot
 app.use('/api/forgotPass', forgotPassRouter);
+app.use('/api/verifiedEmail', createUserRouter);
 // ERROR HANDLER
 app.use(notFound);
 app.use(errorHandler);
