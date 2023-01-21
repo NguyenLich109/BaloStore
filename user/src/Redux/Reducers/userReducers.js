@@ -19,6 +19,10 @@ import {
     USER_LIST_REQUEST,
     USER_LIST_SUCCESS,
     USER_LIST_RESET,
+    CREACTE_USER_REQUEST,
+    CREACTE_USER_SUCCESS,
+    CREACTE_USER_FAIL,
+    CREACTE_USER_RESET,
 } from '../Constants/UserContants';
 
 // LOGIN
@@ -96,6 +100,22 @@ export const userListReducer = (state = { users: [] }, action) => {
             return { loading: false, error: action.payload };
         case USER_LIST_RESET:
             return { users: [] };
+        default:
+            return state;
+    }
+};
+
+// CREATE USER
+export const createUserReducer = (state = [], action) => {
+    switch (action.type) {
+        case CREACTE_USER_REQUEST:
+            return { loading: true };
+        case CREACTE_USER_SUCCESS:
+            return { loading: false, createUs: action.payload };
+        case CREACTE_USER_FAIL:
+            return { loading: false, error: action.payload };
+        case CREACTE_USER_RESET:
+            return {};
         default:
             return state;
     }

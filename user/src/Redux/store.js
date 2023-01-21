@@ -18,6 +18,7 @@ import {
     userRegisterReducer,
     userUpdateProfileReducer,
     userListReducer,
+    createUserReducer,
 } from './Reducers/userReducers';
 import {
     orderAddressMyReducer,
@@ -72,6 +73,7 @@ const reducer = combineReducers({
     province: Province,
     listNews: newsListReducer,
     getDetailNews: getNewsReducer,
+    createUserReducer,
 });
 
 const cartItemsFromLocalStorage = localStorage.getItem('cartItems')

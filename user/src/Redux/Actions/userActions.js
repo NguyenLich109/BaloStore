@@ -17,6 +17,9 @@ import {
     USER_LIST_FAIL,
     USER_LIST_REQUEST,
     USER_LIST_SUCCESS,
+    CREACTE_USER_REQUEST,
+    CREACTE_USER_SUCCESS,
+    CREACTE_USER_FAIL,
 } from '../Constants/UserContants';
 import axios from 'axios';
 import { ORDER_LIST_MY_RESET } from '../Constants/OrderConstants';
@@ -189,3 +192,31 @@ export const listUser = () => async (dispatch) => {
         });
     }
 };
+
+// CREATE USERS
+export const createUser =
+    ({ name, email, phone, password }) =>
+    async (dispatch) => {
+        try {
+            dispatch({ type: CREACTE_USER_REQUEST });
+            const config = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                },
+            };
+
+            const { data } = await axios.post(`/api/verifiedEmail/verified`, { name, email, phone, password }, config);
+            dispatch({ type: CREACTE_USER_SUCCESS, payload: data });
+        } catch (error) {
+            const message = error.response && error.response.data.message ? error.response.data.message : error.message;
+            if (message === 'Not authorized, token failed') {
+                dispatch(logout());
+            }
+            dispatch({
+                type: CREACTE_USER_FAIL,
+                payload: message,
+            });
+        }
+    };

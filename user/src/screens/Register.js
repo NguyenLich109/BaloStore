@@ -4,7 +4,7 @@ import { Link, useRouteMatch } from 'react-router-dom';
 import isEmpty from 'validator/lib/isEmpty';
 import Message from '../components/LoadingError/Error';
 import Loading from '../components/LoadingError/Loading';
-import { register } from '../Redux/Actions/userActions';
+import { register, createUser } from '../Redux/Actions/userActions';
 import Header from './../components/Header';
 
 const Register = ({ location, history }) => {
@@ -100,7 +100,8 @@ const Register = ({ location, history }) => {
         e.preventDefault();
         const isValid = validateAll();
         if (!isValid) return;
-        dispatch(register(name, email, phone, password));
+        //dispatch(register(name, email, phone, password));
+        dispatch(createUser({ name, email, phone, password }));
     };
 
     return (
